@@ -26,6 +26,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.bt.enable.splita2dp=false \
     ro.af.client_heap_size_kbyte=7168 \
+    ro.config.media_vol_steps=25 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.flac.sw.decoder.24bit=true \
