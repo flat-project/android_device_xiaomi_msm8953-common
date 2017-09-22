@@ -189,6 +189,7 @@ PRODUCT_COPY_FILES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service \
     chargeonlymode
 
 # HIDL
