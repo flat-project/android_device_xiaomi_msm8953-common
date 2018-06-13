@@ -78,7 +78,10 @@ persist.hwc.enable_vds=1 \
 persist.hwc.mdpcomp.enable=true \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
-ro.sf.lcd_density=480
+ro.sf.lcd_density=480 \
+sdm.debug.disable_skip_validate=1 \
+vendor.gralloc.enable_fb_ubwc=1 \
+vendor.display.disable_skip_validate=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
