@@ -1,3 +1,6 @@
+# Data files
+/data/connectivity(/.*)?              u:object_r:cnd_data_file:s0
+
 # Firmware
 /firmware/image/(.*)?                              u:object_r:firmware_file:s0
 
