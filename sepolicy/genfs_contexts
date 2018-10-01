@@ -7,3 +7,6 @@ genfscon proc /touchpanel	u:object_r:proc_touchpanel:s0
 # Healthd
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/msm-bcl-20/power_supply                  u:object_r:sysfs_batteryinfo:s0
+
+# Mmc
+genfscon sysfs /devices/soc/7824900.sdhci/mmc_host/mmc0 u:object_r:sysfs_mmc_host:s0
