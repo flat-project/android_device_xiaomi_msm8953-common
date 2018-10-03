@@ -1,2 +1,5 @@
 allow init sysfs:file { open setattr write };
 allow init sysfs_mmc_host:file { setattr w_file_perms };
+allow init proc:file { getattr open read };
+allow init sysfs_devices_system_cpu:file write;
+allow init sysfs_leds:lnk_file read;
