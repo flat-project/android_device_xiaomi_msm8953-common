@@ -39,10 +39,6 @@ on early-init
     write /proc/sys/vm/page-cluster 0
 
 on init
-
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
-
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -283,7 +279,6 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
-    mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
 
     #Create directories for Location services
