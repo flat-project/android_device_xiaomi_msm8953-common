@@ -484,6 +484,7 @@ vendor/radio/qcril_database/qcril.db|8405d20c8e1184c79eba1c4f19ecfb92d7529bdf
 -app/ims/ims.apk|406f0c50b44480789072222a6ba120894dc02394
 etc/permissions/qti-vzw-ims-internal.xml
 lib/com.qualcomm.qti.imscmservice@1.0.so
+lib/com.qualcomm.qti.imscmservice@1.1.so
 lib/lib-imscamera.so
 lib/lib-imsvideocodec.so
 lib/lib-imsvtextutils.so
@@ -493,6 +494,7 @@ lib/libimsmedia_jni.so
 lib/librcc.so
 lib/vendor.qti.imsrtpservice@1.0.so
 lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/com.qualcomm.qti.imscmservice@1.1.so
 lib64/lib-imscamera.so
 lib64/lib-imsvideocodec.so
 lib64/lib-imsvt.so
@@ -508,6 +510,7 @@ vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so
+vendor/lib/com.qualcomm.qti.imscmservice@1.1_vendor.so
 vendor/lib/lib-imsSDP.so
 vendor/lib/lib-imscmservice.so
 vendor/lib/lib-imsdpl.so
@@ -519,6 +522,7 @@ vendor/lib/lib-uceservice.so
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so
+vendor/lib64/com.qualcomm.qti.imscmservice@1.1_vendor.so
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imsSDP.so
 vendor/lib64/lib-imscmservice.so
