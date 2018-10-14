@@ -199,6 +199,9 @@ else
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/fstab.qcom
 endif
 
+# Root
+BOARD_ROOT_EXTRA_FOLDERS := persist
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-07-01
 
