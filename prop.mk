@@ -83,7 +83,8 @@ ro.sf.lcd_density=480 \
 sdm.debug.disable_skip_validate=1 \
 sdm.debug.rotator_downscale=1 \
 vendor.gralloc.enable_fb_ubwc=1 \
-vendor.display.disable_skip_validate=1
+vendor.display.disable_skip_validate=1 \
+vendor.display.perf_hint_window=50
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
