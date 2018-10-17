@@ -34,18 +34,20 @@ function 8953_sched_dcvs_eas()
     echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us
     echo 20000 > /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us
-    echo 1 > /sys/devices/system/cpu/cpufreq/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/iowait_boost_enable
 
     # Enable input boost configuration
     echo "0:1036800" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 0 > /sys/module/cpu_boost/parameters/dynamic_stune_boost
+    echo 1 > /sys/module/cpu_boost/parameters/dynamic_stune_boost
     echo 150 > /sys/module/cpu_boost/parameters/input_boost_ms
 
     # set default schedTune value for foreground/top-app (only affects EAS)
     echo 1 > /dev/stune/foreground/schedtune.prefer_idle
     echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-    echo 1 > /dev/stune/top-app/schedtune.boost
+    echo 0 > /dev/stune/top-app/schedtune.boost
     echo 0 > /dev/stune/top-app/schedtune.sched_boost
+    echo 1 > /dev/stune/rt/schedtune.prefer_idle
+    echo 10 > /dev/stune/rt/schedtune.boost
 }
 
 function 8917_sched_dcvs_eas()
@@ -105,17 +107,17 @@ function 8953_sched_dcvs_hmp()
     #governor settings
     echo 1 > /sys/devices/system/cpu/cpu0/online
     echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo "19000 1401600:39000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-    echo 85 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+    echo "40000 1401600:80000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+    echo 80 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
     echo 20000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
     echo 1401600 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-    echo "85 1401600:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
-    echo 39000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+    echo "50 652800:65 1036800:75 1401600:80 1689600:90" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+    echo 20000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
     echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
     echo 19 > /proc/sys/kernel/sched_upmigrate_min_nice
     # Enable sched guided freq control
-    echo 1 > /sys/devices/system/cpu/cpufreq/interactive/use_sched_load
+    echo 0 > /sys/devices/system/cpu/cpufreq/interactive/use_sched_load
     echo 1 > /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif
     echo 200000 > /proc/sys/kernel/sched_freq_inc_notify
     echo 200000 > /proc/sys/kernel/sched_freq_dec_notify
