@@ -1768,9 +1768,7 @@ case "$target" in
                     8953_sched_dcvs_hmp
                 fi
 
-                # set minimal frequency based on avaliable frequency
-                min_freq=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies | awk '{print $1}'`
-                echo $min_freq > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+                echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
                 # Bring up all cores online
                 echo 1 > /sys/devices/system/cpu/cpu1/online
