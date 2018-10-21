@@ -1718,7 +1718,7 @@ case "$target" in
                     done
                     for cpu_mbps_zones in /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/mbps_zones
                     do
-                        echo "1611 3221 5859 6445 7104" > $cpu_mbps_zones
+                        echo "769 1611 3221 5859 6445 7104" > $cpu_mbps_zones
                     done
                     for cpu_sample_ms in /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/sample_ms
                     do
@@ -1730,7 +1730,7 @@ case "$target" in
                     done
                     for cpu_min_freq in /sys/class/devfreq/soc:qcom,cpubw/min_freq
                     do
-                        echo 1611 > $cpu_min_freq
+                        echo 769 > $cpu_min_freq
                     done
                 done
 
