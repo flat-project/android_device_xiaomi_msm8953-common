@@ -228,6 +228,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     service.qti.ims.enabled=1 \
     telephony.lteOnCdmaDevice=1
 
+# SQLite - F2Fs only
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sqlite.journalmode=OFF \
+    debug.sqlite.syncmode=OFF
+
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
