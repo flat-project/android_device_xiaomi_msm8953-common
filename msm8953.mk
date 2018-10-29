@@ -181,7 +181,8 @@ PRODUCT_PACKAGES += \
     libgnss \
     libgnsspps \
     libloc_core \
-    libloc_pla
+    libloc_pla \
+    libsensorndkbridge
 
 
 PRODUCT_COPY_FILES += \
